@@ -10,8 +10,8 @@ This repo contains training scripts for three datasets (Tiny-ImageNet, CIFAR-10,
 - Loads Tiny-ImageNet-200 from disk (must be downloaded manually)
 - Trains a ResNet18-style teacher model
 - Trains multiple student models with noise + defensive distillation
-  - WVGA: variable noise beta around sigma
-  - WOVGA: beta = sigma
+  - WVGA: variable noise beta around $\sigma$
+  - WOVGA: $\beta$ = $\sigma$
 - Trains baselines (RandSmooth-style, SWEEN)
 - Builds ensembles:
   - Weighted Ensemble (accuracy-weighted averaging)
@@ -41,8 +41,8 @@ Download: http://cs231n.stanford.edu/tiny-imagenet-200.zip
 - Trains a ResNet-110 teacher
 - Trains noisy single-network baselines (SOTA / RS-style)
 - Trains defensive distillation students:
-  - proposed_WVGA: variable beta around sigma
-  - proposed_WOVGA: beta = sigma
+  - proposed_WVGA: variable $\beta$ around $\sigma$
+  - proposed_WOVGA: $\beta$ = $\sigma$
 - Builds ensembles:
   - Weighted Ensemble from WOVGA students
   - Majority Voting from WOVGA students
@@ -75,8 +75,8 @@ Requested save path for the fixed WVGA student:
 - Trains a teacher CNN (clean)
 - Trains noisy baseline single networks (RS / SOTA_WE)
 - Trains defensive distillation students:
-  - Proposed WVGA (train_proposed): variable beta around sigma
-  - Proposed WOVGA (train_without_VGA): beta = sigma
+  - Proposed WVGA (train_proposed): variable $\beta$ around $\sigma$
+  - Proposed WOVGA (train_without_VGA): $\beta$ = $\sigma$
 - Builds ensembles:
   - Weighted Ensemble (WWE)
   - Majority Voting
@@ -108,7 +108,7 @@ Wraps a base classifier (single model OR an ensemble) with Smooth
 - Runs randomized smoothing certification per sample:
     - prediction, radius = smoothed_classifier.certify(x, N0, N, alpha, batch)
 
-idx  \tab   label \tab   predict  \tab  radius  \tab  correct  \tab  time
+```idx   label   predict   radius   correct   time```
 
 
 ## Two certification configurations
