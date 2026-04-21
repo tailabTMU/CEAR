@@ -1,4 +1,4 @@
-# Project README (Training + Certification)
+# CEAR: Certified Ensemble Adversarial Robustness Framework (Training + Certification)
 
 This repo contains training scripts for three datasets (Tiny-ImageNet, CIFAR-10, MNIST) and a certification script (`certify.py`) for randomized smoothing. Each training script produces `.h5` model checkpoints that can later be used by `certify.py` to compute certified radii.
 
@@ -172,3 +172,8 @@ If the versions do not match, TensorFlow may:
 
 ### Verify GPU availability
 ```python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"```
+
+## Citation
+```
+PLACEHOLDER
+```
